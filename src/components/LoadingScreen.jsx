@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 export const LoadingScreen = ({ onComplete }) => {
     const [text, setText] = useState("")
-    const fullText = "<hello World/>";
+    const fullText = "git checkout portfolio...";
 
     useEffect(() => {
         let index = 0;
@@ -23,13 +23,17 @@ export const LoadingScreen = ({ onComplete }) => {
     }, []);
 
     return (
-        <div className="fixed inset-0 z-50 bg-black text-gray-100 flex flex-col items-center justify-center">
-            <div className="mb-4 text-4xl font-mono font-bold">
-                {text}
-                <span className="animate-blink ml-1"> | </span>
+        <div className="fixed inset-0 z-50 bg-[#112255] text-[#F5E6EB] flex flex-col items-center justify-center">
+            <div className="mb-4">
+                <span className="text-[#95B1C9] text-2xl mr-2">$</span>
+                <span className="text-3xl font-mono font-bold">
+                    {text}
+                    <span className="animate-blink ml-1 text-[#95B1C9]">_</span>
+                </span>
             </div>
-            <div className="w-[300px] h-[10px] bg-gray-800 rounded relative overflow-hidden">
-                <div className="w-[40%] h-full bg-blue-500 shadow-[0_0_15px_#3b82f6] animate-loading-bar"></div>
+            <p className="text-[#95B1C9]/80 text-sm font-mono mb-6">Switching to portfolio branch...</p>
+            <div className="w-[300px] h-[10px] bg-[#F5E6EB]/10 rounded-lg relative overflow-hidden backdrop-blur-sm">
+                <div className="w-[40%] h-full bg-[#95B1C9] shadow-[0_0_15px_#95B1C9] animate-loading-bar"></div>
             </div>
         </div>
     )
