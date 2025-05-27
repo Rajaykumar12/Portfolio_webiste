@@ -1,17 +1,15 @@
 import { useState } from "react"
 import { RevealOnScroll } from "../RevealOnScroll"
 import emailjs from 'emailjs-com'
+import toast, { Toaster } from 'react-hot-toast'
 
 
 export const Contacts = () => {
-
     const [formData, setFormData] = useState({
         name:"",
         email: "",
         message: "",
     })
-
-
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -24,17 +22,39 @@ export const Contacts = () => {
                 import.meta.env.VITE_PUBLIC_KEY
             )
             .then((result) => {
-            alert("Message sent alert");
-            setFormData({name: "", email:"", message: ""})
-        }).catch(()=> alert("Something went wrong. Try again"))
+                // Replace alert with styled toast
+                toast.success('Message sent successfully!', {
+                    style: {
+                        background: '#112255',
+                        color: '#F5E6EB',
+                        border: '1px solid #95B1C9',
+                        padding: '16px',
+                    },
+                    duration: 4000,
+                });
+                setFormData({name: "", email:"", message: ""})
+            }).catch(() => {
+                // Replace alert with styled toast
+                toast.error('Something went wrong. Please try again.', {
+                    style: {
+                        background: '#112255',
+                        color: '#F5E6EB',
+                        border: '1px solid #FF6B6B',
+                        padding: '16px',
+                    },
+                    duration: 4000,
+                });
+            })
     }
-
 
     return (
         <section 
             id="contacts" 
             className="min-h-screen flex items-center justify-center py-20 bg-[#112255]"
         >
+            {/* Add the Toaster component */}
+            <Toaster position="bottom-center" />
+            
             <RevealOnScroll>
                 <div className="max-w-2xl mx-auto px-4">
                     <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-[#95B1C9] to-[#F5E6EB] bg-clip-text text-transparent text-center">

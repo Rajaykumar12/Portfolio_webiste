@@ -40,7 +40,7 @@ export const Home = () => {
                             View Projects
                         </a>
                         <a 
-                            href="#contact" 
+                            href="#contacts" 
                             className="bg-transparent text-[#95B1C9] py-3 px-8 rounded-lg font-semibold
                                     transform transition-all duration-300 ease-in-out
                                     hover:bg-[#95B1C9]/10 hover:scale-105
