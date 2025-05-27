@@ -119,4 +119,19 @@ portfolio...`,o="git checkout portfolio...";return reactExports.useEffect(()=>{l
                                       hover:-translate-y-0.5 \r
                                       active:scale-[0.98]\r
                                       disabled:opacity-70 disabled:cursor-not-allowed\r
-                                      focus:outline-none`,children:"Send Message"})]})]})})})};function App(){const[e,a]=reactExports.useState(!0),[n,l]=reactExports.useState(!1);return jsxRuntimeExports.jsx(Layout,{children:e?jsxRuntimeExports.jsx(LoadingScreen,{onComplete:()=>a(!1)}):jsxRuntimeExports.jsxs("div",{className:`min-h-screen transition-opacity duration-700 ${e?"opacity-0":"opacity-100"} bg-color-black text-gray-100`,children:[jsxRuntimeExports.jsx(Navbar,{menuOpen:n,setMenuOpen:l}),jsxRuntimeExports.jsx(Home,{}),jsxRuntimeExports.jsx(About,{}),jsxRuntimeExports.jsx(Projects,{}),jsxRuntimeExports.jsx(Contacts,{})]})})}clientExports.createRoot(document.getElementById("root")).render(jsxRuntimeExports.jsx(reactExports.StrictMode,{children:jsxRuntimeExports.jsx(App,{})}));
+                                      focus:outline-none`,children:"Send Message"})]})]})})})},MobileMenu=({menuOpen:e,setMenuOpen:a})=>jsxRuntimeExports.jsxs("div",{className:`fixed top-0 left-0 w-full min-h-screen bg-[#112255]/95 backdrop-blur-sm z-50 
+                        flex flex-col items-center justify-center transition-all duration-300 ease-in-out
+                        ${e?"opacity-100 visible":"opacity-0 invisible pointer-events-none"}`,children:[jsxRuntimeExports.jsx("button",{onClick:()=>a(!1),className:`absolute top-6 right-6 text-[#95B1C9] text-3xl focus:outline-none cursor-pointer\r
+                          hover:text-[#F5E6EB] transition-colors duration-300`,"aria-label":"Close Menu",children:"×"}),jsxRuntimeExports.jsx("a",{href:"#home",onClick:()=>a(!1),className:`text-2xl font-semibold text-[#95B1C9] my-4 
+                           transform transition-all duration-300
+                           hover:text-[#F5E6EB] hover:-translate-y-1
+                           ${e?"opacity-100 translate-y-0":"opacity-0 translate-y-5"}`,children:"Home"}),jsxRuntimeExports.jsx("a",{href:"#about",onClick:()=>a(!1),className:`text-2xl font-semibold text-[#95B1C9] my-4 
+                           transform transition-all duration-300
+                           hover:text-[#F5E6EB] hover:-translate-y-1
+                           ${e?"opacity-100 translate-y-0":"opacity-0 translate-y-5"}`,children:"About"}),jsxRuntimeExports.jsx("a",{href:"#projects",onClick:()=>a(!1),className:`text-2xl font-semibold text-[#95B1C9] my-4 
+                           transform transition-all duration-300
+                           hover:text-[#F5E6EB] hover:-translate-y-1
+                           ${e?"opacity-100 translate-y-0":"opacity-0 translate-y-5"}`,children:"Projects"}),jsxRuntimeExports.jsx("a",{href:"#contacts",onClick:()=>a(!1),className:`text-2xl font-semibold text-[#95B1C9] my-4 
+                           transform transition-all duration-300
+                           hover:text-[#F5E6EB] hover:-translate-y-1
+                           ${e?"opacity-100 translate-y-0":"opacity-0 translate-y-5"}`,children:"Contact"})]});function App(){const[e,a]=reactExports.useState(!0),[n,l]=reactExports.useState(!1);return jsxRuntimeExports.jsx(Layout,{children:e?jsxRuntimeExports.jsx(LoadingScreen,{onComplete:()=>a(!1)}):jsxRuntimeExports.jsxs("div",{className:`min-h-screen transition-opacity duration-700 ${e?"opacity-0":"opacity-100"} bg-color-black text-gray-100`,children:[jsxRuntimeExports.jsx(Navbar,{menuOpen:n,setMenuOpen:l}),jsxRuntimeExports.jsx(MobileMenu,{menuOpen:n,setMenuOpen:l}),jsxRuntimeExports.jsx(Home,{}),jsxRuntimeExports.jsx(About,{}),jsxRuntimeExports.jsx(Projects,{}),jsxRuntimeExports.jsx(Contacts,{})]})})}clientExports.createRoot(document.getElementById("root")).render(jsxRuntimeExports.jsx(reactExports.StrictMode,{children:jsxRuntimeExports.jsx(App,{})}));
