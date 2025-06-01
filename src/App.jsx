@@ -7,6 +7,7 @@ import { About } from './components/sections/About';
 import { Projects } from './components/sections/Projects';
 import { Contacts } from './components/sections/Contacts';
 import { MobileMenu } from './components/MobileMenu';
+import { Blog } from "./components/sections/Blog"
 import "./index.css";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
                     <Home/>
                     <About/>
                     <Projects/>
+                    <Blog />
                     <Contacts/>
                 </div>
             )}
