@@ -165,16 +165,15 @@ export const Blog = () => {
         document.body.style.overflow = 'unset'
     }
 
-    // Function to get dynamic grid classes based on number of posts
     const getGridClasses = (postCount) => {
         if (postCount === 1) {
-            return "grid grid-cols-1 gap-8 max-w-4xl mx-auto" // Single blog takes full width (but constrained)
+            return "grid grid-cols-1 gap-8 max-w-4xl mx-auto" 
         } else {
-            return "grid grid-cols-1 md:grid-cols-2 gap-8" // 2 blogs per row on medium+ screens
+            return "grid grid-cols-1 md:grid-cols-2 gap-8" 
+            
         }
     }
 
-    // Function to get individual post classes based on number of posts
     const getPostClasses = (postCount) => {
         if (postCount === 1) {
             return "bg-[#F5E6EB]/5 border border-[#95B1C9]/20 rounded-lg overflow-hidden transition-all duration-300 hover:border-[#95B1C9] hover:bg-[#F5E6EB]/10 cursor-pointer group"
@@ -280,7 +279,6 @@ export const Blog = () => {
                     </div>
                 </RevealOnScroll>
 
-                {/* Dynamic grid based on number of posts */}
                 <div className={getGridClasses(filteredPosts.length)}>
                     {filteredPosts.map((post, index) => (
                         <RevealOnScroll key={post.id}>

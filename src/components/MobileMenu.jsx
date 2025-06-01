@@ -45,6 +45,16 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
                 Projects 
             </a>
             <a 
+                href="#blog"
+                onClick={()=> setMenuOpen(false)}
+                className={`text-2xl font-semibold text-[#95B1C9] my-4 
+                           transform transition-all duration-300
+                           hover:text-[#F5E6EB] hover:-translate-y-1
+                           ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
+            >
+                Blogs
+            </a>
+            <a 
                 href="#contacts"
                 onClick={()=> setMenuOpen(false)}
                 className={`text-2xl font-semibold text-[#95B1C9] my-4 
