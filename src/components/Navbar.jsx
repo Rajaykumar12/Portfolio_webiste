@@ -40,16 +40,16 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {  // Fix: Add curly braces
                             Projects 
                     </a>
                     <a 
-                        href="#contacts" 
-                        className="text-[#E5E0DA] hover:text-[#F5E6EB] transition-colors"
-                        >
-                            Contact
-                    </a>
-                    <a 
                         href="#blog" 
                         className="text-[#E5E0DA] hover:text-[#F5E6EB] transition-colors"
                         >
                             Blog
+                    </a>
+                    <a 
+                        href="#contacts" 
+                        className="text-[#E5E0DA] hover:text-[#F5E6EB] transition-colors"
+                        >
+                            Contact
                     </a>
                 </div>
             </div>

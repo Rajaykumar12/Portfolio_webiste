@@ -52,7 +52,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
                            hover:text-[#F5E6EB] hover:-translate-y-1
                            ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
             >
-                Blogs
+                Blog
             </a>
             <a 
                 href="#contacts"
