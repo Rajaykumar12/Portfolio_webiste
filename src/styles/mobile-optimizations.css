@@ -1,0 +1,71 @@
+/* Mobile Performance Optimizations */
+
+/* Reduce motion for better mobile performance */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+  /* Disable backdrop-blur on mobile for better performance */
+  .backdrop-blur-sm {
+    backdrop-filter: none !important;
+  }
+  
+  /* Reduce transform effects on mobile */
+  .hover\:translate-x-1:hover {
+    transform: none !important;
+  }
+  
+  .hover\:-translate-y-1:hover {
+    transform: none !important;
+  }
+  
+  /* Optimize gradients on mobile */
+  .bg-gradient-to-br {
+    background: #112255 !important;
+  }
+  
+  /* Reduce shadows on mobile */
+  .shadow-lg,
+  .shadow-xl {
+    box-shadow: none !important;
+  }
+  
+  /* Optimize animations */
+  .animate-spin {
+    animation-duration: 2s !important;
+  }
+  
+  /* Reduce blur effects */
+  .blur-sm {
+    filter: none !important;
+  }
+}
+
+/* Touch optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .hover\:scale-105:hover {
+    transform: none !important;
+  }
+  
+  .hover\:bg-opacity-80:hover {
+    opacity: 1 !important;
+  }
+}
+
+/* Reduce expensive CSS properties on mobile */
+@media (max-width: 768px) {
+  * {
+    will-change: auto !important;
+  }
+  
+  .transition-all {
+    transition-property: opacity, transform !important;
+    transition-duration: 0.2s !important;
+  }
+}
