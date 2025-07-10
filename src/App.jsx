@@ -5,7 +5,7 @@ import { Navbar } from './components/Navbar';
 import { Home } from './components/sections/Home';
 import { MobileMenu } from './components/MobileMenu';
 import Footer from './components/Footer';
-import PortfolioMatrixRain from './components/PortfolioMatrixRain';
+import MatrixRain from './components/MatrixRain';
 import "./index.css";
 
 // Lazy load heavy components
@@ -33,7 +33,7 @@ function App() {
                 <div className={`min-h-screen transition-opacity duration-700 ${ isLoading ? "opacity-0" : "opacity-100"} bg-color-black text-gray-100`}>
                     {/* Matrix Rain Background */}
                     <div className="matrix-rain">
-                        <PortfolioMatrixRain />
+                        <MatrixRain />
                     </div>
                     
                     <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />

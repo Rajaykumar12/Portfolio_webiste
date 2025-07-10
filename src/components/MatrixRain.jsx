@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const MatrixRain = ({ 
-  columns = 30, 
-  speed = 50, 
-  fontSize = 14,
-  opacity = 0.03,
-  color = '#00ff00'
+  columns = 100, 
+  speed = 60, 
+  fontSize = 17,
+  opacity = 0.06,
+  color = '#8BB6E8'
 }) => {
   const canvasRef = useRef(null);
   const [isVisible, setIsVisible] = useState(true);
@@ -38,13 +38,13 @@ const MatrixRain = ({
     }
 
     const draw = () => {
-      // Semi-transparent black background for fade effect
-      ctx.fillStyle = `rgba(0, 0, 0, ${opacity})`;
+      // Very subtle fade effect with portfolio blue background
+      ctx.fillStyle = `rgba(17, 34, 85, ${opacity})`;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // Green text
+      // Light blue text with improved font
       ctx.fillStyle = color;
-      ctx.font = `${fontSize}px monospace`;
+      ctx.font = `${fontSize}px 'Courier New', monospace`;
 
       // Draw characters
       for (let i = 0; i < drops.length; i++) {
@@ -52,6 +52,9 @@ const MatrixRain = ({
         const x = i * fontSize;
         const y = drops[i];
 
+        // Add some randomness to opacity for variation
+        const alpha = Math.random() * 0.8 + 0.3;
+        ctx.fillStyle = `${color}${Math.floor(alpha * 255).toString(16).padStart(2, '0')}`;
         ctx.fillText(char, x, y);
 
         // Reset drop to top randomly
@@ -90,7 +93,7 @@ const MatrixRain = ({
       className="fixed inset-0 pointer-events-none z-0"
       style={{
         background: 'transparent',
-        mixBlendMode: 'screen'
+        mixBlendMode: 'soft-light'
       }}
     />
   );
