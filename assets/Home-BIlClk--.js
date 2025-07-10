@@ -1,0 +1,10 @@
+import{j as e}from"./animation-DapMf6yi.js";import{R as r}from"./RevealOnScroll-wz7gAhO5.js";import"./vendor-DJG_os-6.js";const t="/Portfolio_webiste/assets/6-CzDjAAqd.jpeg",n=()=>e.jsx("section",{id:"home",className:"relative h-screen flex items-center justify-center bg-transparent",children:e.jsx(r,{children:e.jsxs("div",{className:"text-center z-10 px-4",children:[e.jsxs("div",{className:"flex items-center justify-center gap-8 mb-6 flex-col md:flex-row",children:[e.jsxs("div",{className:"order-2 md:order-1",children:[e.jsx("h1",{className:"text-5xl md:text-7xl font-bold bg-gradient-to-r from-[#95B1C9] to-[#F5E6EB] bg-clip-text text-transparent leading-right",children:"Hi, I'm Ajay Kumar"}),e.jsx("p",{className:"text-[#E5E0DA] text-lg mt-4 max-w-lg",children:"Computer Science Student & Software Developer"})]}),e.jsx("div",{className:"order-1 md:order-2",children:e.jsx("img",{src:t,alt:"Ajay Kumar",className:`w-48 h-48 object-cover object-top rounded-3xl border-4 border-[#95B1C9] shadow-lg\r
+                                        hover:border-[#F5E6EB] transition-all duration-300`})})]}),e.jsxs("div",{className:"flex justify-center space-x-4",children:[e.jsx("a",{href:"#projects",className:`bg-[#95B1C9] text-[#112255] py-3 px-8 rounded-lg font-semibold\r
+                                    transform transition-all duration-300 ease-in-out\r
+                                    hover:bg-[#F5E6EB] hover:scale-105\r
+                                    active:scale-95 \r
+                                    border-2 border-transparent hover:border-[#95B1C9]`,children:"View Projects"}),e.jsx("a",{href:"#contacts",className:`bg-transparent text-[#95B1C9] py-3 px-8 rounded-lg font-semibold\r
+                                    transform transition-all duration-300 ease-in-out\r
+                                    hover:bg-[#95B1C9]/10 hover:scale-105\r
+                                    active:scale-95 \r
+                                    border-2 border-[#95B1C9] hover:border-[#F5E6EB]`,children:"Contact Me"})]})]})})});export{n as Home};
