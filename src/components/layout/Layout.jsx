@@ -9,9 +9,6 @@ export const Layout = ({ children }) => {
                     animationData={backgroundAnimation}
                     loop={true}
                     className="w-full h-full"
-                    rendererSettings={{
-                        preserveAspectRatio: 'xMidYMid slice'
-                    }}
                 />
             </div>
             {children}
