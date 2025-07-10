@@ -1,3 +1,4 @@
+import { title } from "framer-motion/client";
 import { RevealOnScroll } from "../RevealOnScroll"
 
 
@@ -6,13 +7,13 @@ export const Projects = () => {
         {
             title: "Redactly AI",
             description: "An intelligent text redaction tool that automatically detects and removes sensitive information from medical records using NLP and machine learning.",
-            tech: ["Python", "Django", "React", "Node.js", "Pandas", "NumPy", "Scikit-learn", "NLTK", "Docker"],
+            tech: ["Python","React", "Node.js", "Pandas", "NumPy", "Scikit-learn", "NLTK", "Docker"],
             link: "https://github.com/Rajaykumar12/RedactlyAi"
         },
         {
             title: "EarnEasy",
             description: "A rental marketplace for students to rent out or rent products from others, making peer-to-peer rentals easy and secure.",
-            tech: ["React", "Node.js", "Django", "JavaScript", "Express.js", "RESTful APIs"],
+            tech: ["React", "Node.js","JavaScript", "Express.js", "RESTful APIs"],
             link: "https://github.com/Rajaykumar12/EarnEasy"
         },
         {
@@ -34,11 +35,29 @@ export const Projects = () => {
             link: "https://github.com/Rajaykumar12/Movie_Recommendation_System"
         },
         {
+            title: "Weather App",
+            description: "This Weather App leverages React and TailwindCSS to deliver real-time weather updates through a sleek, responsive interface. Designed for scalability and modern user experience, it provides accurate weather data for any location.",
+            tech: ["React", "TailwindCss", "React", "OpenWeatherApi"],
+            link: "https://github.com/Rajaykumar12/WeatherApp"
+        },
+        {
+            title: "F1 Predictor",
+            description: "F1 predictor uses machine learning and data analytics to forecast Formula 1 race outcomes. It empowers fans and analysts with data-driven insights for accurate race predictions.",
+            tech: ["Python", "Jupyter", "Numpy", "Pandas", "MatplotLib", "Seaborn", "Sklearn", "Pickle"],
+            link: "https://github.com/Rajaykumar12/F1_predictor"
+        },
+        {
+            title: "Welfare Management System for Armed forces",
+            description: "Digital platform designed to connect military personnel and their families with vital government policies, welfare schemes, and everyday updates. It aims to bridge communication gaps, ensuring military communities have streamlined access to support and information.",
+            tech: ["React", "TaiwindCss", "JavaScript", "GoogleAuth", "FireBase"],
+            link: "https://github.com/Rajaykumar12/quantum-skill-sangam25"
+        },
+        {
             title: "CMD Animal Database",
             description: "Created a command-line animal database application in C# for a pet store, allowing users to add, update, view, and manage information about animals and their availability.",
             tech: ["C#", "CLI", "OOP", ".NET"],
             link: "https://github.com/Rajaykumar12/c-projects/tree/main/animal%20databas"
-        }
+        },
     ];
 
     return ( 
