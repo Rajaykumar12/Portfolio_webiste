@@ -45,6 +45,11 @@
   .blur-sm {
     filter: none !important;
   }
+  
+  /* Disable Matrix rain on mobile for performance */
+  .matrix-rain {
+    display: none !important;
+  }
 }
 
 /* Touch optimizations */
