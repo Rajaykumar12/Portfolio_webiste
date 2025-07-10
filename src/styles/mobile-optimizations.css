@@ -46,9 +46,9 @@
     filter: none !important;
   }
   
-  /* Disable Matrix rain on mobile for performance */
-  .matrix-rain {
-    display: none !important;
+  /* Optimize Matrix rain for mobile - reduce performance impact */
+  .matrix-rain canvas {
+    opacity: 0.7 !important;
   }
 }
 

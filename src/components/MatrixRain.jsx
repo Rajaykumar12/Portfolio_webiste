@@ -9,6 +9,19 @@ const MatrixRain = ({
 }) => {
   const canvasRef = useRef(null);
   const [isVisible, setIsVisible] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -29,12 +42,17 @@ const MatrixRain = ({
     const chars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789';
     const charArray = chars.split('');
 
-    // Initialize drops
+    // Initialize drops with mobile optimization
     const drops = [];
     const numColumns = Math.floor(canvas.width / fontSize);
     
     for (let i = 0; i < numColumns; i++) {
-      drops[i] = Math.random() * canvas.height;
+      // On mobile, only activate every 2nd or 3rd column for performance
+      if (isMobile && i % 2 === 0) {
+        drops[i] = Math.random() * canvas.height;
+      } else if (!isMobile) {
+        drops[i] = Math.random() * canvas.height;
+      }
     }
 
     const draw = () => {
@@ -48,6 +66,9 @@ const MatrixRain = ({
 
       // Draw characters
       for (let i = 0; i < drops.length; i++) {
+        // Skip empty drops (mobile optimization)
+        if (drops[i] === undefined) continue;
+        
         const char = charArray[Math.floor(Math.random() * charArray.length)];
         const x = i * fontSize;
         const y = drops[i];
@@ -67,13 +88,13 @@ const MatrixRain = ({
       }
     };
 
-    const intervalId = setInterval(draw, speed);
+    const intervalId = setInterval(draw, isMobile ? speed * 1.5 : speed); // Slower on mobile for better performance
 
     return () => {
       clearInterval(intervalId);
       window.removeEventListener('resize', resizeCanvas);
     };
-  }, [columns, speed, fontSize, opacity, color]);
+  }, [columns, speed, fontSize, opacity, color, isMobile]);
 
   // Toggle visibility on mobile for performance
   useEffect(() => {
