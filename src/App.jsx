@@ -8,6 +8,7 @@ import { Projects } from './components/sections/Projects';
 import { Contacts } from './components/sections/Contacts';
 import { MobileMenu } from './components/MobileMenu';
 import { Blog } from "./components/sections/Blog"
+import Footer from './components/Footer';
 import "./index.css";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
                     <Projects/>
                     <Blog />
                     <Contacts/>
+                    <Footer />
                 </div>
             )}
         </Layout>
